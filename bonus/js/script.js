@@ -27,7 +27,6 @@ $( document ).ready(function() {
    }
  }
 
-
  function indietro(){
 
    var posizioneImg = $(".slider-wrapper .images  img.active");
