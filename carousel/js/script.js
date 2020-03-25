@@ -7,6 +7,8 @@ $( document ).ready(function() {
  $(".next").click(avanti);
  $(".prev").click(indietro);
 
+}); 
+
  // funzioni
  function avanti(){
 
@@ -16,7 +18,7 @@ $( document ).ready(function() {
    posizioneImg.removeClass("active");
    posizionePal.removeClass("active");
 
-   // se siamo all'utima img dello slider, ritorna ad essere attiva la prima
+   // se siamo all'utima img dello slider, ritorna ad essere attiva la prima img
    if(posizioneImg.hasClass("last")){
        $(".slider-wrapper .images  img.first").addClass("active");
        $(".nav i.first").addClass("active");
@@ -47,4 +49,4 @@ $( document ).ready(function() {
    }
  }
 
-});
+

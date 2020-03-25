@@ -7,6 +7,8 @@ $( document ).ready(function() {
  $(".next").click(avanti);
  $(".prev").click(indietro);
 
+});
+
  // funzioni
  function avanti(){
 
@@ -46,4 +48,4 @@ $( document ).ready(function() {
    }
  }
 
-});
+
