@@ -20,23 +20,13 @@ $( document ).ready(function() {
     }
   });
 
-  //aggiungo funzione per cambiare immagine anche cliccando sui pallini 
+   //aggiungo funzione per cambiare immagine anche cliccando sui pallini 
   $('i.fas.fa-circle').click(function () {
-    //salvo i pallini presenti in pagina
-    var pallini = $('i.fas.fa-circle');
-    //  console.log($(this));
-    for (var i = 0; i < pallini.length; i++) {
-      //  console.log('entro nel for', pallini.eq(i));
-      //se il pallino su cui clicco è uguale all'iesimo pallino cliccato allora il valore attuale 
-      //del contatore i posso usarlo come indice per risalire all'immagine 
-      if ($(this).is(pallini.eq(i))) {
-        //   console.log('entro nell if ');
-        $('.slider-wrapper .images  img.active').removeClass('active');
-        $('img').eq(i).addClass('active');
-      }
-    }
+    var clicked = $(this).attr('data-ref');
     $('i.fas.fa-circle.active').removeClass('active');
+    $('img').removeClass('active');
     $(this).addClass('active');
+    $("img[data-ref=" + clicked + "]").addClass('active');
   });
 
 });

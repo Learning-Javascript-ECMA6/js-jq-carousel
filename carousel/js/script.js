@@ -22,6 +22,18 @@ $( document ).ready(function() {
 
   //aggiungo funzione per cambiare immagine anche cliccando sui pallini 
   $('i.fas.fa-circle').click(function () {
+    //seleziono l'attributo 
+    var clicked = $(this).attr('data-ref');
+    //rimuovo la classe active su tutto tranne su img 
+    $('i.fas.fa-circle.active').removeClass('active');
+    $('img').removeClass('active');
+    $(this).addClass('active');
+    //quando clicco sul pallino si collega direttamente all'attributo caggiungendo la classe active e cambia immagine 
+    $("img[data-ref=" + clicked + "]").addClass('active');
+  });
+
+ /*  //aggiungo funzione per cambiare immagine anche cliccando sui pallini [HARD VERSION :) ]
+  $('i.fas.fa-circle').click(function () {
     //salvo i pallini presenti in pagina
     var pallini = $('i.fas.fa-circle');
     //  console.log($(this));
@@ -37,7 +49,7 @@ $( document ).ready(function() {
     }
     $('i.fas.fa-circle.active').removeClass('active');
     $(this).addClass('active');
-  });
+  }); */
 }); 
 
  // funzioni
